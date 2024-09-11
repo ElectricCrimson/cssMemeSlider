@@ -1,4 +1,4 @@
-/* *,
+*,
 *::before,
 *::after {
   margin: 0;
@@ -8,4 +8,66 @@
 
 html {
   font-size: 62.5%;
-} */
+}
+
+body {
+  font-family: "Crimson Text", system-ui, serif;
+  font-size: 2.4rem;
+  color: #fff;
+}
+
+.container {
+  max-width: 100rem;
+  margin: 0 auto;
+  background: url(img/background.png) no-repeat;
+  background-size: 100%;
+  border-radius: 1.5rem;
+}
+
+.slider {
+  padding: 3rem 5.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+}
+
+.slider__item:not(:first-child) {
+  display: none;
+}
+
+.slider__item {
+  border: 1.5px solid #000;
+  border-radius: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  margin-bottom: 5.1rem;
+}
+
+.img__wrapper {
+  max-width: 35rem;
+}
+
+.slider__img {
+  width: 100%;
+  border-radius: 1rem;
+  display: block;
+}
+
+.controls {
+  align-self: stretch;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.description {
+  letter-spacing: 0.5px;
+}
+
+.pagination__item {
+  cursor: pointer;
+}
