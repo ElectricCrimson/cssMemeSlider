@@ -72,19 +72,19 @@ body {
   column-gap: 0.5rem;
 }
 
-.nav__item__wrapper {
+.nav__item {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 
-.pagination__item[name="btn"]:checked + .nav__item .nav__btn {
+.nav__input[name="btn"]:checked + .nav__label .nav__btn {
   background-color: transparent;
   transition: all 0.4s ease-in-out;
 }
 
-.nav__item {
+.nav__label {
   padding: 1rem 0.5rem;
   cursor: pointer;
 }
@@ -100,19 +100,19 @@ body {
   transition: all 0.4s ease-in-out;
 }
 
-.nav__item:hover .nav__btn,
-.pagination__item[name="btn"]:checked + .nav__item:hover .nav__btn {
+.nav__label:hover .nav__btn,
+.nav__input[name="btn"]:checked + .nav__label:hover .nav__btn {
   background-color: #fba03e;
   border-color: #fba03e;
 }
 
-.nav__item:active .nav__btn,
-.pagination__item[name="btn"]:checked + .nav__item:active .nav__btn {
+.nav__label:active .nav__btn,
+.nav__input[name="btn"]:checked + .nav__label:active .nav__btn {
   background-color: #f9d2a9;
   border-color: #f9d2a9;
 }
 
-.pagination__item[name="btn"] {
+.nav__input[name="btn"] {
   visibility: hidden;
   display: none;
 }
