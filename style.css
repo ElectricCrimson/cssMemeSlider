@@ -22,7 +22,7 @@ body {
   background: url(img/background.png) no-repeat;
   background-size: 100%;
   border-radius: 1.5rem;
-  padding: 3rem 6.05rem 3rem 7.1rem;
+  padding: 4rem 6.05rem 3rem 7.1rem;
 }
 
 .slider {
@@ -95,6 +95,7 @@ body {
 .nav {
   display: flex;
   column-gap: 0.5rem;
+  align-self: end;
 }
 
 .nav__item {
@@ -124,18 +125,12 @@ body {
   transition: all 0.4s ease-in-out;
 }
 
-.nav__input[name="btn"]:checked + .nav__label .nav__btn {
-  background-color: #f1dcc8;
-}
-
-.nav__label:hover .nav__btn,
-.nav__input[name="btn"] + .nav__label:hover .nav__btn {
+.nav__label:hover .nav__btn {
   background-color: #fba03e;
   border-color: #fba03e;
 }
 
-.nav__label:active .nav__btn,
-.nav__input[name="btn"] + .nav__label:active .nav__btn {
+.nav__label:active .nav__btn {
   background-color: #f1dcc8;
   border-color: #fba03e;
 }
@@ -143,6 +138,17 @@ body {
 .nav__input[name="btn"] {
   visibility: hidden;
   display: none;
+}
+
+#pag1:checked ~ .controls .nav__label:first-of-type .nav__btn,
+#pag2:checked ~ .controls .nav__label:nth-of-type(2) .nav__btn,
+#pag3:checked ~ .controls .nav__label:nth-of-type(3) .nav__btn,
+#pag4:checked ~ .controls .nav__label:nth-of-type(4) .nav__btn,
+#pag5:checked ~ .controls .nav__label:nth-of-type(5) .nav__btn,
+#pag6:checked ~ .controls .nav__label:nth-of-type(6) .nav__btn,
+#pag7:checked ~ .controls .nav__label:nth-of-type(7) .nav__btn,
+#pag8:checked ~ .controls .nav__label:last-of-type .nav__btn {
+  background-color: #f1dcc8;
 }
 
 #pag1:checked ~ .active__slide .slides,
