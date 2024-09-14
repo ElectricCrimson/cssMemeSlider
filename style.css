@@ -22,20 +22,19 @@ body {
   background: url(img/background.png) no-repeat;
   background-size: 100%;
   border-radius: 1.5rem;
-  padding: 3rem 5.05rem 3rem 5.1rem;
+  padding: 3rem 6.05rem 3rem 7.1rem;
 }
 
 .slider {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  margin-bottom: 5.1rem;
 }
 
 .active__slide {
   width: 38rem;
   overflow: hidden;
+  margin-bottom: 4.1rem;
+  align-self: center;
 }
 
 .slides {
@@ -71,8 +70,26 @@ body {
   align-items: center;
 }
 
+.text {
+  width: 55%;
+  overflow: hidden;
+}
+
+.active__text {
+  width: 100%;
+  display: flex;
+  align-items: center;  
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+}
+
 .description {
+  width: 100%;
   letter-spacing: 0.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-shrink: 0;
 }
 
 .nav {
@@ -128,34 +145,63 @@ body {
   display: none;
 }
 
-#pag1:checked ~ .slides {
+#pag1:checked ~ .active__slide .slides,
+#pag1:checked ~ .controls .active__text {
   transform: translateX(0);
 }
 
-#pag2:checked ~ .slides {
+#pag2:checked ~ .active__slide .slides {
   transform: translateX(-12.5%);
 }
 
-#pag3:checked ~ .slides{
+#pag2:checked ~ .controls .active__text {
+  transform: translateX(-100%);
+}
+
+#pag3:checked ~ .active__slide .slides {
   transform: translateX(-25%);
 }
 
-#pag4:checked ~ .slides{
+#pag3:checked ~ .controls .active__text {
+  transform: translateX(-200%);
+}
+
+#pag4:checked ~ .active__slide .slides {
   transform: translateX(-37.5%);
 }
 
-#pag5:checked ~ .slides{
+#pag4:checked ~ .controls .active__text {
+  transform: translateX(-300%);
+}
+
+#pag5:checked ~ .active__slide .slides {
   transform: translateX(-50%);
 }
 
-#pag6:checked ~ .slides{
+#pag5:checked ~ .controls .active__text {
+  transform: translateX(-400%);
+}
+
+#pag6:checked ~ .active__slide .slides {
   transform: translateX(-62.5%);
 }
 
-#pag7:checked ~ .slides{
+#pag6:checked ~ .controls .active__text {
+  transform: translateX(-500%);
+}
+
+#pag7:checked ~ .active__slide .slides {
   transform: translateX(-75%);
 }
 
-#pag8:checked ~ .slides{
+#pag7:checked ~ .controls .active__text {
+  transform: translateX(-600%);
+}
+
+#pag8:checked ~ .active__slide .slides {
   transform: translateX(-87.5%);
+}
+
+#pag8:checked ~ .controls .active__text {
+  transform: translateX(-700%);
 }
