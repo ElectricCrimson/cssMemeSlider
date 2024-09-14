@@ -22,18 +22,27 @@ body {
   background: url(img/background.png) no-repeat;
   background-size: 100%;
   border-radius: 1.5rem;
+  padding: 3rem 5.05rem 3rem 5.1rem;
 }
 
 .slider {
-  padding: 3rem 5.05rem 3rem 5.1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 5.1rem;
 }
 
-.slider__item:not(:first-child) {
-  display: none;
+.active__slide {
+  width: 38rem;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 800%;
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
 }
 
 .slider__item {
@@ -43,7 +52,6 @@ body {
   justify-content: center;
   align-items: center;
   padding: 1.5rem;
-  margin-bottom: 5.1rem;
 }
 
 .img__wrapper {
@@ -52,12 +60,12 @@ body {
 
 .slider__img {
   width: 100%;
+  height: 100%;
   border-radius: 1rem;
   display: block;
 }
 
 .controls {
-  align-self: stretch;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -77,7 +85,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 
 .nav__input[name="btn"]:checked + .nav__label .nav__btn {
   background-color: transparent;
@@ -100,19 +107,55 @@ body {
   transition: all 0.4s ease-in-out;
 }
 
+.nav__input[name="btn"]:checked + .nav__label .nav__btn {
+  background-color: #f1dcc8;
+}
+
 .nav__label:hover .nav__btn,
-.nav__input[name="btn"]:checked + .nav__label:hover .nav__btn {
+.nav__input[name="btn"] + .nav__label:hover .nav__btn {
   background-color: #fba03e;
   border-color: #fba03e;
 }
 
 .nav__label:active .nav__btn,
-.nav__input[name="btn"]:checked + .nav__label:active .nav__btn {
-  background-color: #f9d2a9;
-  border-color: #f9d2a9;
+.nav__input[name="btn"] + .nav__label:active .nav__btn {
+  background-color: #f1dcc8;
+  border-color: #fba03e;
 }
 
 .nav__input[name="btn"] {
   visibility: hidden;
   display: none;
+}
+
+#pag1:checked ~ .slides {
+  transform: translateX(0);
+}
+
+#pag2:checked ~ .slides {
+  transform: translateX(-12.5%);
+}
+
+#pag3:checked ~ .slides{
+  transform: translateX(-25%);
+}
+
+#pag4:checked ~ .slides{
+  transform: translateX(-37.5%);
+}
+
+#pag5:checked ~ .slides{
+  transform: translateX(-50%);
+}
+
+#pag6:checked ~ .slides{
+  transform: translateX(-62.5%);
+}
+
+#pag7:checked ~ .slides{
+  transform: translateX(-75%);
+}
+
+#pag8:checked ~ .slides{
+  transform: translateX(-87.5%);
 }
